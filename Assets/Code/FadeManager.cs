@@ -67,6 +67,8 @@ public class FadeManager : MonoBehaviour
          }
       }
 
+       LightProbes.Tetrahedralize();
+
       if ((time + 2) > Time.unscaledTime) {
          yield return new WaitForSecondsRealtime((time + 2) - Time.unscaledTime);
       }
