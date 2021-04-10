@@ -10,6 +10,7 @@ public class GamestateManager : MonoBehaviour
    public static GamestateManager Instance { get { return _instance; } }
 
    public GameObject m_camera;
+   public GameObject m_score_ui;
    public GameObject m_controller;
    public GameObject m_ball;
    public GameObject m_cage;
@@ -25,6 +26,7 @@ public class GamestateManager : MonoBehaviour
       }
 
       m_camera.SetActive(false);
+      m_score_ui.SetActive(false);
       m_controller.SetActive(false);
       m_ball.SetActive(false);
       m_cage.SetActive(false);
@@ -35,6 +37,7 @@ public class GamestateManager : MonoBehaviour
    public void start_gameplay()
    {
       m_camera.SetActive(true);
+      m_score_ui.SetActive(true);
       m_controller.SetActive(true);
       m_ball.SetActive(true);
       m_cage.SetActive(true);
@@ -46,20 +49,28 @@ public class GamestateManager : MonoBehaviour
 
    public void on_game_state_change(GameStateChangedEvent e)
    {
-      if (e.next == EGameState.GAME_OVER || e.next == EGameState.GAME_OVER_WIN) {
+      if (e.next == EGameState.GAME_OVER) {
          GameEvent<GameStateChangedEvent>.Unregister(on_game_state_change);
          gameplay_gameover();
+      } else if (e.next == EGameState.GAME_OVER_WIN)
+	  {
+        GameEvent<GameStateChangedEvent>.Unregister(on_game_state_change);
+        gameplay_gameover_win();
       }
    }
 
-   public void gameplay_gameover()
+   private void gameplay_gameover()
    {
+      m_score_ui.SetActive(false);
+
       SceneManager.LoadSceneAsync(3, LoadSceneMode.Additive);
       Destroy(gameObject);
    }
 
-   public void gameplay_gameover_win()
+   private void gameplay_gameover_win()
    {
+      m_score_ui.SetActive(false);
+
       SceneManager.LoadSceneAsync(4, LoadSceneMode.Additive);
       Destroy(gameObject);
    }

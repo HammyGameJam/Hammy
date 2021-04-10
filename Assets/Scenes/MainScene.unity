@@ -3934,6 +3934,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 155901066}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &155901068 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1314566836845279153, guid: fb6885ff7592c402aba0da27638a020a,
+    type: 3}
+  m_PrefabInstance: {fileID: 155901066}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &158262750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46924,6 +46930,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_camera: {fileID: 1530627989}
+  m_score_ui: {fileID: 155901068}
   m_controller: {fileID: 637815371}
   m_ball: {fileID: 1426890046}
   m_cage: {fileID: 843790775}

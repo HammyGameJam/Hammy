@@ -69,7 +69,6 @@ public class HammyGameStateManager : MonoBehaviour
         NarrativeAudioManager.Get().PlayLine(m_WellDoneHammy);
         m_Karen.SetActive(false);
         ChangeState(EGameState.GAME_OVER_WIN);
-        GamestateManager.Instance.gameplay_gameover_win();
     }
 
 
@@ -99,6 +98,11 @@ public class HammyGameStateManager : MonoBehaviour
 
     private void ChangeState(EGameState state)
     {
+        if (GameState == state)
+		{
+            return;
+		}
+
         GameStateChangedEvent e;
         e.previous = GameState;
         e.next = state;
