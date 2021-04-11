@@ -3,7 +3,22 @@ guid: 74abcbee8c2a67f4fbb47a1e184a608c
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: geo_cage_bars
+    second: {fileID: 2100000, guid: d651d6ef1d6323f4da0ddbed03b93377, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: geo_cage_base
+    second: {fileID: 2100000, guid: fac837928a6104245a50a53607aa1502, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: geo_cage_wheel1
+    second: {fileID: 2100000, guid: 130c01676d1aa5c43bf96405a81828c0, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

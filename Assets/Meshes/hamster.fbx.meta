@@ -3,7 +3,22 @@ guid: b449e03a5825dcf4ab40f525e836416a
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: geo_eye_mat
+    second: {fileID: 2100000, guid: 370775c60d28cf741b3d07f4244313b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: geo_fur_mat
+    second: {fileID: 2100000, guid: 2707197b69d8ad343a6881fc3365b862, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: geo_hamster_skin_mat
+    second: {fileID: 2100000, guid: e6ca813e5250880468b6a0ec9e598617, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
